@@ -12,6 +12,10 @@ app.post('/oauth/token', function (req, res) {
     res.send(response);
 });
 
+app.post('/oauth/revoke', function (req, res) {
+    res.send();
+});
+
 
 var server = app.listen(3000, function () {
   var host = server.address().address;
