@@ -12,6 +12,15 @@ app.post('/oauth/token', function (req, res) {
     res.send(response);
 });
 
+app.post('/api/somecall', function (req, res) {
+    console.log(req.headers);
+    if (req.headers['authorization']) {
+        res.send();
+    } else {
+        res.status(403).send('Forbidden')
+    }
+});
+
 app.post('/oauth/revoke', function (req, res) {
     res.send();
 });
